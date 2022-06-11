@@ -112,7 +112,8 @@ select {
 .text-white { color: hsl( var(--clr-white) );}
 
 .example-component {
-    background-color: hsl( var(--clr-light) /.2 );
+    color: hsl( var(--clr-white) );
+    text-white;
     /* background-color: hsl(150 77% 90% /.3); 
     /.3 changes the opacity
     1st line is the same as writing the uncommented code */
