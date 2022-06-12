@@ -115,6 +115,23 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem); 
+    /*margin-top: var(--flow-space, 1rem); is an undefined custom property 
+    so the 1rem becomes the default and can be modified in the design-system.html doc  */
+    outline: 1px solid red;
+}
+/* 
+* + * is called the Lobotomized Owl and will apply styles to elements with siblings or adjacent items before it.
+
+The same can be done via but can lead to issues later when overriding styles 
+*:not(:first-child) //// margin-top
+
+With a bottom element use:
+*:not(:last-child)//// change to margin-bottom 
+*/
+
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
